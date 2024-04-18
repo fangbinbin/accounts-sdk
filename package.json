@@ -11,7 +11,7 @@
     "dist"
   ],
   "scripts": {
-    "clean": "rm -rf dist && rm -rf build",
+    "clean": "rimraf dist && rimraf build",
     "start": "npm run clean && rollup -c --watch",
     "prepare": "npm run build",
     "build": "npm run clean && rollup -c",

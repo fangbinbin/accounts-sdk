@@ -44,7 +44,7 @@ export default class RedirectUriParamsPersister {
     }
 
     const queryParams = {
-      ...(redirectUriParams.query_params ?? {}),
+      ...(redirectUriParams.query_params || {}),
       ...qs.parse(window.location.search.substring(1)),
     };
 
