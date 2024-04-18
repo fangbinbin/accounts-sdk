@@ -49,7 +49,7 @@ export default class RedirectUriParamsPersister {
     };
 
     const hashParams = {
-      ...(redirectUriParams.hash_params ?? {}),
+      ...(redirectUriParams.hash_params || {}),
       ...qs.parse(window.location.hash.substring(1)),
     };
 
